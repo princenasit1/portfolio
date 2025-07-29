@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { FloatingElement, RevealOnScroll } from "./Animations/ScrollAnimations";
+import { RevealOnScroll } from "./Animations/ScrollAnimations";
 import {
   HoverGlow,
   MagneticButton,
@@ -8,7 +8,7 @@ import {
 } from "./Animations/InteractiveElements";
 import { ModernCard } from "./ModernCard";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
-import { LuArrowBigRight, LuArrowRight } from "react-icons/lu";
+import {  LuArrowRight } from "react-icons/lu";
 import { Button } from "./Button";
 
 const experiences = [

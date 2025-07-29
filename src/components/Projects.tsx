@@ -1,33 +1,20 @@
 import { motion } from "framer-motion";
 
-import medicalq from "../../public/assets/projects/medicalq.png";
 import carbontrack from "../../public/assets/projects/carbontrack.png";
-import bookstore from "../../public/assets/projects/bookstore.png";
-import personal_portfolio from "../../public/assets/projects/portfolio.png";
 import FinManager from "../../public/assets/projects/FinManager.png";
 import lms from "../../public/assets/projects/lms.png";
-import cf_tool from "../../public/assets/projects/cfhelper.png";
 
 import { Github, ExternalLink, Code, Sparkles } from "lucide-react";
 import {
   SiReact,
   SiTailwindcss,
-  SiVite,
-  SiHtml5,
-  SiCss3,
   SiJavascript,
   SiExpress,
   SiNodedotjs,
   SiTypescript,
-  SiGooglechrome,
-  SiChartdotjs,
-  SiFirebase,
-  SiGo,
   SiMysql,
-  SiDocker,
   SiFigma,
   SiPrisma,
-  SiNextui,
   SiPostgresql,
   SiStripe,
   SiPython,
@@ -47,6 +34,7 @@ import { ModernCard } from "./ModernCard";
 import { Button } from "./Button";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
 import Image from "next/image";
+import { IconType } from "react-icons";
 
 // ---------- Type Definitions ----------
 interface Tech {
@@ -58,7 +46,7 @@ interface Tech {
 interface Project {
   title: string;
   description: string;
-  img: ImageData;
+  img: IconType;
   link: string;
   github_link: string;
   tech: Tech[];

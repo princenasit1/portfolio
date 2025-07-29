@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Award, Calendar, Trophy, ExternalLink, Sparkles } from "lucide-react";
 
-// Import images
-import pic1 from "../../public/assets/awards/21-22.jpg";
-import pic2 from "../../public/assets/awards/23-24.jpg";
-import certificate1 from "../../public/assets/certificates/photo.jpg";
 import certificate2 from "../../public/assets/certificates/d40f9085-adcc-4307-9432-8358986e4392.png";
 import { RevealOnScroll } from "./Animations/ScrollAnimations";
 import {

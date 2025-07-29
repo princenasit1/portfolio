@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import { FloatingElement, RevealOnScroll } from "./Animations/ScrollAnimations";
+import {  RevealOnScroll } from "./Animations/ScrollAnimations";
 import { HoverGlow, TiltCard } from "./Animations/InteractiveElements";
 import { ModernCard } from "./ModernCard";
 import { BlurText, FadeInText } from "./Animations/TextReveal";

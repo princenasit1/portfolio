@@ -50,7 +50,12 @@ export const SplitText: React.FC<SplitTextProps> = ({
     const absoluteLines = splitType === "lines";
     if (absoluteLines) el.style.position = "relative";
 
-    let splitter: any;
+    let splitter: {
+      lines?: HTMLElement[];
+      words?: HTMLElement[];
+      chars?: HTMLElement[];
+      revert: () => void;
+    };    
     try {
       splitter = new GSAPSplitText(el, {
         type: splitType,

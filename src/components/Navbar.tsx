@@ -4,8 +4,7 @@ import { HiSun, HiMoon } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import { MagneticButton } from "./Animations/InteractiveElements";
 import { Button } from "./Button";
-import logo from "../../public/logo.png"; // Adjust the path as necessary
-import Image from "next/image";
+import Link from "next/link";
 
 interface NavLink {
   href: string;
@@ -173,12 +172,12 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <a href="/">
+              <Link href="/">
                 <div className="relative inline-block px-3 py-1 font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent group">
                   &lt;PN/&gt;
                   <span className="absolute inset-0 rounded-md border border-blue-500 opacity-30 group-hover:opacity-100 transition-all duration-300 group-hover:animate-pulse pointer-events-none"></span>
                 </div>
-              </a>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}

@@ -9,15 +9,15 @@ import {
   SiGmail,
   SiDiscord,
 } from "react-icons/si";
-import { Download, Star } from "lucide-react";
+import { Download } from "lucide-react";
 
-import xLogo from "../../public/assets/logo/x.png";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
 import { RevealOnScroll } from "./Animations/ScrollAnimations";
 import { MagneticButton, TiltCard } from "./Animations/InteractiveElements";
 import { ModernCard } from "./ModernCard";
 import { Button } from "./Button";
 import { FaHandshake } from "react-icons/fa";
+import { IconType } from "react-icons";
 
 type SocialLink = {
   icon: React.ElementType | null;
@@ -25,7 +25,7 @@ type SocialLink = {
   label: string;
   color: string;
   bgColor: string;
-  customIcon?: any;
+  customIcon?: IconType;
 };
 
 const socialLinks: SocialLink[] = [
@@ -100,7 +100,7 @@ const Contact = () => {
 
           <FadeInText delay={0.3}>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Let's collaborate and build something amazing together
+              Let&apos;s collaborate and build something amazing together
             </p>
           </FadeInText>
         </div>
