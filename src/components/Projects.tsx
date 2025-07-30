@@ -33,7 +33,7 @@ import {
 import { ModernCard } from "./ModernCard";
 import { Button } from "./Button";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { IconType } from "react-icons";
 
 // ---------- Type Definitions ----------
@@ -46,8 +46,8 @@ interface Tech {
 interface Project {
   title: string;
   description: string;
-  img: IconType;
-  link: string;
+  img: StaticImageData;
+  link?: string;
   github_link: string;
   tech: Tech[];
   category: string;

@@ -33,10 +33,11 @@ import numpyIcon from "../../public/assets/skills/numpy.png";
 import pandasIcon from "../../public/assets/skills/pandas.png";
 import matplotlibIcon from "../../public/assets/skills/matplotlib.png";
 import { FloatingElement, RevealOnScroll } from "./Animations/ScrollAnimations";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { HoverGlow, TiltCard } from "./Animations/InteractiveElements";
 import { ModernCard } from "./ModernCard";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
+import { IconType } from "react-icons";
 
 // const skills = [
 //   // Languages
@@ -581,7 +582,7 @@ const categories = [
 
 interface SkillCardProps {
   skill: {
-    img: string;
+    img: StaticImageData;
     name: string;
     category: string;
     level: number;

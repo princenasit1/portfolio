@@ -12,7 +12,7 @@ export const TiltCard = memo(
     const [rotateY, setRotateY] = useState(0);
 
     const handleMouseMove = useCallback(
-      (e: React.MouseEvent<HTMLButtonElement>) => {
+      (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget?.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
@@ -64,14 +64,14 @@ export const MagneticButton = memo(
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = useCallback(
-      (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - centerX) * strength;
-        const deltaY = (e.clientY - centerY) * strength;
+      (e: React.MouseEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const deltaX = (e.clientX - centerX) * strength;
+      const deltaY = (e.clientY - centerY) * strength;
 
-        setPosition({ x: deltaX, y: deltaY });
+      setPosition({ x: deltaX, y: deltaY });
       },
       [strength]
     );

@@ -20,7 +20,7 @@ import { FaHandshake } from "react-icons/fa";
 import { IconType } from "react-icons";
 
 type SocialLink = {
-  icon: React.ElementType | null;
+  icon: IconType;
   href: string;
   label: string;
   color: string;
@@ -139,7 +139,7 @@ const Contact = () => {
                           />
                           {social.customIcon ? (
                             <Image
-                              src={social.customIcon}
+                              src={typeof social.customIcon === "string" ? social.customIcon : ""}
                               alt={social.label}
                               className="w-7 h-7 relative z-10 group-hover:brightness-0 group-hover:invert transition-all duration-300"
                             />

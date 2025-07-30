@@ -51,11 +51,11 @@ export const SplitText: React.FC<SplitTextProps> = ({
     if (absoluteLines) el.style.position = "relative";
 
     let splitter: {
-      lines?: HTMLElement[];
-      words?: HTMLElement[];
-      chars?: HTMLElement[];
+      lines?: Element[];
+      words?: Element[];
+      chars?: Element[];
       revert: () => void;
-    };    
+    };
     try {
       splitter = new GSAPSplitText(el, {
         type: splitType,
@@ -68,16 +68,17 @@ export const SplitText: React.FC<SplitTextProps> = ({
     }
 
     let targets: HTMLElement[] = [];
+
     switch (splitType) {
       case "lines":
-        targets = splitter.lines;
+        targets = (splitter.lines ?? []) as HTMLElement[];
         break;
       case "words":
-        targets = splitter.words;
+        targets = (splitter.words ?? []) as HTMLElement[];
         break;
       case "chars":
       default:
-        targets = splitter.chars;
+        targets = (splitter.chars ?? []) as HTMLElement[];
     }
 
     if (!targets || targets.length === 0) {
@@ -94,7 +95,10 @@ export const SplitText: React.FC<SplitTextProps> = ({
     const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin);
     const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
     const marginUnit = marginMatch ? marginMatch[2] || "px" : "px";
-    const sign = marginValue < 0 ? `-=${Math.abs(marginValue)}${marginUnit}` : `+=${marginValue}${marginUnit}`;
+    const sign =
+      marginValue < 0
+        ? `-=${Math.abs(marginValue)}${marginUnit}`
+        : `+=${marginValue}${marginUnit}`;
     const start = `top ${startPct}%${sign}`;
 
     const tl = gsap.timeline({

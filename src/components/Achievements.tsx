@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Award, Calendar, Trophy, ExternalLink, Sparkles } from "lucide-react";
 
 import certificate2 from "../../public/assets/certificates/d40f9085-adcc-4307-9432-8358986e4392.png";
@@ -12,19 +12,24 @@ import {
 import { ModernCard } from "./ModernCard";
 import { Button } from "./Button";
 import { BlurText, FadeInText } from "./Animations/TextReveal";
+import { JSX } from "react";
 
 // ---------- Type Definitions ----------
 interface Achievement {
+  id: number;
   title: string;
   issuer?: string;
+  rank: string;
   organization?: string;
   date: string;
   description: string;
   category: string;
   type: "Winner" | "Achievement" | "Participation" | 'Learning';
-  img?: string;
+  img?: string | StaticImageData;
   link?: string;
   featured?: boolean;
+  participants: string;
+  skills: string[];
 }
 
 interface AchievementCardProps {

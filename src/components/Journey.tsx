@@ -28,6 +28,7 @@ import {
   FaTrophy,
   FaUniversity,
 } from "react-icons/fa";
+import { IconType } from "react-icons";
 
 // Education data
 const educationData = [
@@ -174,7 +175,7 @@ interface EducationCardProps {
     period: string;
     grade: string;
     description: string;
-    icon: string;
+    icon: IconType;
     color: string;
     achievements: string[];
   };
@@ -374,7 +375,7 @@ const About = () => {
                       <div className="relative z-10">
                         <div className="flex flex-col lg:flex-row items-center gap-8 justify-center">
                           {/* Profile Section */}
-                          <div className="flex flex-col items-center text-center lg:items-start justify-center text-center lg:text-left">
+                          <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
                             {/* Centered Profile Image */}
                             <motion.div
                               className="w-40 h-40 relative mb-6"
